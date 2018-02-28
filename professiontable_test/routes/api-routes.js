@@ -23,6 +23,8 @@ module.exports = function(app) {
             // now that we have access to that data in dbPost packet
             // how do we display it to the user
             // lets send it back to them in a json format
+            res.json(dbPost);
+            // ok now with that front end should know what to display because this information is whats retrieved in the result in ajax get request
         })
         
     });
