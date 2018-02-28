@@ -18,9 +18,11 @@ module.exports = function(app) {
         // leave the object empty cuze we are not looking for anything specific 
         db.Profession.findAll({})
         //once it finsishes its task of finding all data
-        // we will store that data into dbPost
+        // we will store that data into a packet dbPost
         .then(function(dbPost){
-
+            // now that we have access to that data in dbPost packet
+            // how do we display it to the user
+            // lets send it back to them in a json format
         })
         
     });
