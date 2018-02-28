@@ -16,7 +16,7 @@ module.exports = function(app) {
         // name of the model we are going to use
         // method we are going to use in this case find all 
         // leave the object empty cuze we are not looking for anything specific 
-        db.profession.findAll({})
+        db.professions.findAll({})
         //once it finsishes its task of finding all data
         // we will store that data into a packet dbPost
         .then(function(dbPost){
