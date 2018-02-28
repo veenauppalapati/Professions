@@ -30,11 +30,3 @@ module.exports = function(app) {
     });
 };
 
-//example to refer to
-  // GET route for getting all of the posts
-  app.get("/api/posts/", function(req, res) {
-    db.Post.findAll({})
-    .then(function(dbPost) {
-      res.json(dbPost);
-    });
-  });
