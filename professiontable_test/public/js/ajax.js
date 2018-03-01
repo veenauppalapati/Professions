@@ -22,10 +22,12 @@ alert('im loaded')
 function professionTableIteration(data){
 
 	//once the get request gets the response 
-	//lets log the data into terminal for tests			
-	data.forEach(function (currentValue){
-		console.log(currentValue.occupation);
-		console.log(currentValue.id);
+	//lets log the data into terminal for tests	
+	
+	
+	data.forEach(function (currentValue, index, array){
+		// console.log(currentValue.occupation);
+		// console.log(currentValue.id);
 
 		var occupation= currentValue.occupation;
 		var professionid = currentValue.id;
@@ -33,6 +35,22 @@ function professionTableIteration(data){
 		htmlHandler(professionid, occupation);
 
 	});
+
+	$(".occupations").click(function(){
+		console.log('working')
+			// class will be shown
+	var occupationSelected = $(this).prop('id');
+		if ($(this).prop('checked')){
+			
+
+			$(`input[type='file'][name='${occupationSelected}']`).removeClass('hidden');
+			// console.log(test);
+		}else{
+			$(`input[type='file'][name='${occupationSelected}']`).addClass('hidden');
+
+		}
+
+		})
 
 }
 
@@ -45,18 +63,27 @@ function htmlHandler(pk, occupation){
 		<div class="form-group">
 			<label for="${occupation}"></label>
 			<input type="checkbox" 
+			class="occupations"
 			id="${occupation}" 
-			value="${pk}"> 
-			${occupation}
+			value="${pk}">
+			<span style= "padding: 60px; margin:20px;">			
+			 ${occupation}
+			 </span>
+			 </br>
+			 <input type="file" 
+			 class="hidden"
+			 name= "${occupation}" 
+			 placeholder= "Upload file for ${occupation}">
 		</div>
 	</div>`				
 	;
-	
+
 	$('#professionRow').append(professionList);
 
-}
 	
-			
+}
 
+
+				
 //============================================
 });// document on ready function closing tag 
