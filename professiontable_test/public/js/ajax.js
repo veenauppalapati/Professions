@@ -23,7 +23,7 @@ function professionTableIteration(data){
 
 	//once the get request gets the response 
 	//lets log the data into terminal for tests			
-	data.forEach(function (currentValue, index, array){
+	data.forEach(function (currentValue){
 		console.log(currentValue.occupation);
 		console.log(currentValue.id);
 
