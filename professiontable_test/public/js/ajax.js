@@ -1,8 +1,7 @@
 $(document).ready(function(event){
 	
 //============================================
-console.log('hello');
-alert('im loaded')
+
 	//GET REQUEST For all the data from profession table
 	//============================================
 
