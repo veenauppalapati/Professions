@@ -35,19 +35,6 @@
     <script src="js/ajax.js">
 
     </script>
-    <script>
-        $(document).ready(function(){
-            $(".occupations").click(function(){
-                console.log('working')
-		if ($(this).prop('checked')){
-			// class will be shown
-			var occupationSelected = $(this).prop('id');
-            var test = $(`input[type='file'][name='${occupationSelected}']`);	
-            console.log(test);
-		}
-		
-	    })
-        })
-    </script>
+  
 </body>
 </html>
